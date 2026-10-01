@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tooth Lovers Dental Clinic | Gentle, Modern Dentistry</title>
+<meta name="description" content="Tooth Lovers Dental Clinic offers gentle family, cosmetic, implant and orthodontic dentistry in a calm, modern studio. Book your visit today.">
+<meta name="theme-color" content="#18224a">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#18224a;      /* dark surfaces (header, results, footer) */
+  --navy-800:#202c5c;      /* logo navy */
+  --ink:#1a2347;           /* headings */
+  --text:#3b4160;          /* body copy */
+  --accent:#4a5b91;        /* eyebrows, stats, icons */
+  --accent-soft:#e3e7f1;
+  --gold:#b39461;          /* logo gold */
+  --gold-soft:#e6d5b1;     /* champagne buttons */
+  --cream:#f9f7f2;
+  --mist:#eaedf3;
+  --white:#fff;
+  --line:#dfe2ea;
+  --radius-lg:24px;
+  --radius:18px;
+  --container:1500px;
+  --gutter:clamp(16px,4vw,40px);
+  --section:clamp(72px,9vw,160px);
+  --font:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);color:var(--text);background:var(--white);font-size:clamp(16px,1.05vw,19px);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;color:var(--ink);font-weight:500;letter-spacing:-.035em;line-height:1.1}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.container{width:min(var(--container),100% - var(--gutter)*2);margin-inline:auto}
+.eyebrow{display:block;font-size:clamp(13px,.95vw,17px);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:clamp(14px,1.4vw,22px)}
+.h2{font-size:clamp(36px,3.4vw,66px)}
+.center{text-align:center}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:clamp(15px,.95vw,18px);letter-spacing:-.01em;border:1.5px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn--gold{background:var(--gold-soft);color:var(--navy-900)}
+.btn--gold:hover{background:#dcc597}
+.btn--accent{background:var(--accent);color:#fff}
+.btn--accent:hover{background:#3d4c7d}
+.btn--dark{background:var(--navy-900);color:#fff}
+.btn--dark:hover{background:var(--navy-800)}
+.btn--ghost-light{border-color:rgba(255,255,255,.55);color:#fff}
+.btn--ghost-light:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn--outline{border-color:var(--ink);color:var(--ink)}
+.btn--outline:hover{background:var(--ink);color:#fff}
+
+/* ---------- Image placeholders ----------
+   Each .ph is numbered (data-ph). Replace the .ph element with
+   <img src="..." alt="..."> — the .media wrapper keeps size & crop. */
+.media{position:relative;overflow:hidden;background:var(--mist)}
+.media>img,.media>.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph{display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;
+  background:
+    repeating-linear-gradient(135deg,rgba(32,44,92,.06) 0 14px,transparent 14px 28px),
+    linear-gradient(160deg,#dfe4ee,#c9d0e0);
+  color:var(--navy-800)}
+.ph__label{display:inline-flex;flex-direction:column;align-items:center;gap:4px;padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.82);border:1.5px dashed rgba(32,44,92,.35);max-width:90%;line-height:1.3}
+.ph__num{font-weight:700;font-size:clamp(15px,1.1vw,20px);letter-spacing:.06em}
+.ph__desc{font-size:clamp(12px,.8vw,14px);color:var(--text)}
+.ph--dark{background:
+    repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0 16px,transparent 16px 32px),
+    radial-gradient(120% 120% at 75% 40%,#56628f 0%,#2a3567 45%,#141c3d 100%);}
+.ph--dark .ph__label{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff;backdrop-filter:blur(4px)}
+.ph--dark .ph__desc{color:rgba(255,255,255,.8)}
+.ph--hero{justify-content:flex-end;align-items:flex-start;padding:clamp(20px,4vw,60px) clamp(20px,8vw,160px)}
+.ph--cta{align-items:flex-start;padding-top:24px}
+.ba .ph{align-items:flex-start;padding:18px}
+.ba__before{justify-content:flex-start}
+.ba__after{justify-content:flex-end}
+.ph--tiny{padding:0}
+.ph--tiny .ph__label{padding:0;background:none;border:0}
+.ph--tiny .ph__num{font-size:12px}
+
+/* ---------- Header ---------- */
+.header{position:sticky;top:0;z-index:50;background:var(--navy-900);border-bottom:1px solid rgba(255,255,255,.06)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;height:clamp(72px,5.7vw,110px)}
+.logo img{height:clamp(42px,3.4vw,62px);width:auto}
+.nav{display:flex;align-items:center;gap:clamp(18px,1.6vw,32px)}
+.nav a,.nav__drop>button{color:rgba(255,255,255,.88);font-weight:500;font-size:clamp(15px,1.05vw,20px);transition:color .2s;background:none;border:0;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:6px}
+.nav a:hover,.nav__drop>button:hover{color:var(--gold-soft)}
+.nav a.btn{color:var(--navy-900)}
+.nav__drop{position:relative}
+.nav__drop svg{transition:transform .25s}
+.nav__drop.open svg{transform:rotate(180deg)}
+.nav__menu{position:absolute;top:calc(100% + 16px);left:-16px;min-width:200px;background:#fff;border-radius:14px;padding:8px;box-shadow:0 18px 40px rgba(16,22,50,.22);opacity:0;visibility:hidden;transform:translateY(-6px);transition:.2s}
+.nav__drop.open .nav__menu{opacity:1;visibility:visible;transform:none}
+.nav__menu a{display:block;color:var(--ink);padding:10px 14px;border-radius:10px;font-size:16px}
+.nav__menu a:hover{background:var(--cream);color:var(--ink)}
+.header__cta{display:flex;align-items:center;gap:12px}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:none;cursor:pointer;align-items:center;justify-content:center}
+.burger span{display:block;width:20px;height:2px;background:#fff;position:relative;transition:.25s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:#fff;transition:.25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{top:0;transform:rotate(45deg)}
+.menu-open .burger span::after{top:0;transform:rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:clamp(620px,45vw,866px);display:flex;align-items:center;color:#fff;isolation:isolate}
+.hero__bg{position:absolute;inset:0;z-index:-1;background:var(--navy-900)}
+/* Photo sits on the right; navy fades from solid (left) to clear (right) */
+.hero__bg>.hero__img{left:38%;width:62%;object-position:50% 40%}
+.hero__bg::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--navy-900) 0%,var(--navy-900) 38%,rgba(24,34,74,.82) 46%,rgba(24,34,74,.45) 58%,rgba(24,34,74,.12) 72%,rgba(24,34,74,0) 85%)}
+.hero__card{width:min(835px,100%);padding:clamp(28px,2.8vw,52px);border-radius:var(--radius-lg);background:linear-gradient(110deg,rgba(24,34,74,.94) 0%,rgba(28,40,84,.84) 50%,rgba(32,44,92,.5) 100%);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);margin-block:clamp(40px,5vw,96px);box-shadow:0 30px 60px rgba(10,14,35,.25)}
+.hero__card .eyebrow{color:var(--gold-soft)}
+.hero h1{color:#fff;font-size:clamp(42px,4.8vw,92px);letter-spacing:-.045em;line-height:1.03}
+.hero__lead{margin-top:clamp(20px,2.2vw,40px);font-size:clamp(17px,1.2vw,23px);line-height:1.6;color:rgba(255,255,255,.92);max-width:720px}
+.hero__btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(28px,4vw,76px)}
+.hero__btns .btn{min-height:clamp(52px,3.1vw,60px)}
+.trust{display:flex;align-items:center;gap:12px;margin-top:clamp(22px,2vw,34px);font-weight:600;font-size:clamp(15px,.95vw,18px)}
+.stars{display:inline-flex;gap:3px;color:var(--gold)}
+.stars svg{width:clamp(16px,1.1vw,21px);height:auto}
+.trust .stars{color:var(--gold-soft)}
+
+/* ---------- Stats strip ---------- */
+.strip{background:var(--cream);padding-block:clamp(28px,2.6vw,48px)}
+.strip__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.strip__grid p{font-weight:600;color:var(--ink);font-size:clamp(16px,1.05vw,20px);line-height:1.4}
+
+/* ---------- Split sections (about / why) ---------- */
+.split{padding-block:var(--section)}
+.split__grid{display:grid;grid-template-columns:47% 1fr;gap:clamp(40px,6vw,90px);align-items:center}
+.split__img{border-radius:var(--radius-lg);aspect-ratio:705/682}
+.media>.why-img{object-position:50% 62%}
+.split__body p.lead{margin-top:clamp(18px,2vw,32px);max-width:700px}
+.split__body .btn{margin-top:clamp(28px,3vw,56px)}
+.nums{display:flex;flex-wrap:wrap;gap:clamp(28px,4.5vw,76px);margin-top:clamp(40px,5vw,86px)}
+.nums strong{display:block;font-weight:500;font-size:clamp(40px,3vw,56px);color:var(--accent);letter-spacing:-.03em;line-height:1}
+.nums span{display:block;margin-top:10px;font-weight:600;color:var(--accent);font-size:clamp(15px,1.05vw,20px)}
+.checks{margin-top:clamp(36px,4.6vw,88px);display:grid;gap:14px}
+.checks li{display:flex;align-items:center;gap:12px;color:var(--ink);font-size:clamp(16px,1.08vw,20px)}
+.checks svg{flex:none;color:var(--gold)}
+
+/* ---------- Treatments ---------- */
+.treat{background:var(--cream);padding-block:clamp(64px,5.5vw,100px) var(--section)}
+.treat__intro{max-width:520px;margin:clamp(18px,2.2vw,40px) auto 0}
+.treat__grid{display:grid;grid-template-columns:788px 1fr;grid-template-columns:minmax(0,52.5%) 1fr;gap:clamp(24px,5.8vw,88px);margin-top:clamp(40px,4.3vw,80px);align-items:stretch}
+.tlist{display:flex;flex-direction:column;gap:20px}
+.titem{border-radius:var(--radius);background:#fff;transition:background .35s}
+.titem__head{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:clamp(22px,2vw,36px) clamp(22px,1.6vw,30px);font-weight:500;font-size:clamp(24px,2vw,38px);letter-spacing:-.04em;color:var(--ink);line-height:1.15;transition:color .35s}
+.titem__panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.titem__panel>div{overflow:hidden}
+.titem__panel p{padding:0 clamp(22px,1.6vw,30px);color:rgba(255,255,255,.9);max-width:690px}
+.titem__panel .btn{margin:clamp(24px,2.3vw,42px) clamp(22px,1.6vw,30px) clamp(24px,1.6vw,30px);min-height:clamp(48px,3vw,58px)}
+.titem.active{background:var(--navy-900)}
+.titem.active .titem__head{color:#fff;padding-bottom:clamp(14px,1.2vw,22px)}
+.titem.active .titem__panel{grid-template-rows:1fr}
+.treat__media{position:relative;border-radius:var(--radius-lg);min-height:420px}
+.treat__media .ph,.treat__media img{transition:opacity .45s}
+.treat__media [data-slide]{opacity:0}
+.treat__media [data-slide].show{opacity:1}
+.media>.cosmetic-img{object-position:50% 35%}
+
+/* ---------- Results (before/after) ---------- */
+.results{background:var(--navy-900);padding-block:clamp(64px,5.5vw,100px) clamp(80px,8vw,150px)}
+.results h2{color:#fff}
+.results__grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:clamp(40px,5vw,96px)}
+.ba{border-radius:var(--radius);aspect-ratio:735/531;--pos:50%;touch-action:pan-y;user-select:none}
+.ba__after{clip-path:inset(0 0 0 var(--pos))}
+.ba__line{position:absolute;top:0;bottom:0;left:var(--pos);width:8px;transform:translateX(-50%);background:var(--accent);pointer-events:none;z-index:2}
+.ba__knob{position:absolute;top:50%;left:var(--pos);transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:3;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:4}
+.ba__tag{position:absolute;bottom:14px;z-index:2;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(24,34,74,.75);color:#fff;padding:5px 10px;border-radius:999px;pointer-events:none}
+.ba__tag--l{left:14px}.ba__tag--r{right:14px}
+.results h3{color:#fff;font-size:clamp(22px,1.95vw,37px);margin-top:clamp(18px,1.8vw,32px);letter-spacing:-.04em}
+
+/* ---------- Standard / features ---------- */
+.std{background:var(--cream);padding-block:clamp(48px,3vw,56px) var(--section)}
+.std__head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.std__head p{max-width:440px;padding-bottom:6px}
+.std__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:clamp(48px,5vw,96px)}
+.fcard{border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,2vw,40px);transition:transform .3s,box-shadow .3s,background .3s}
+.fcard:hover{transform:translateY(-4px);background:#fff;box-shadow:0 18px 40px rgba(26,35,71,.07)}
+.fcard__ico{width:54px;height:54px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center}
+.fcard h3{font-size:clamp(26px,1.95vw,37px);margin-top:clamp(56px,5.5vw,104px);letter-spacing:-.04em}
+.fcard p{margin-top:18px}
+
+/* ---------- Team ---------- */
+.team{padding-block:clamp(64px,8vw,150px) clamp(64px,7vw,130px)}
+.team__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:clamp(40px,4.5vw,80px)}
+.doc{background:var(--cream);border-radius:var(--radius-lg);padding:20px 20px 24px}
+.doc .media{border-radius:var(--radius);aspect-ratio:440/412}
+.doc h3{font-size:clamp(20px,1.3vw,25px);margin-top:24px;letter-spacing:-.03em}
+.doc p{color:var(--accent);margin-top:10px;font-size:clamp(15px,1.05vw,20px)}
+
+/* ---------- Testimonials ---------- */
+.reviews{background:var(--mist);padding-block:var(--section) clamp(80px,7vw,140px)}
+.reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:clamp(40px,3.5vw,66px)}
+.rcard{background:#fff;border-radius:var(--radius-lg);padding:clamp(26px,1.6vw,32px) clamp(26px,1.6vw,30px);display:flex;flex-direction:column;gap:clamp(22px,1.8vw,34px)}
+.rcard .stars{color:var(--accent)}
+.rcard .stars .off{color:#b9c1d6}
+.rcard blockquote{margin:0;flex:1;padding-bottom:clamp(10px,4vw,70px)}
+.who{display:flex;align-items:center;gap:14px}
+.avatar{width:62px;height:62px;border-radius:50%;flex:none}
+.who strong{display:block;color:var(--ink);font-weight:600;font-size:clamp(17px,1.08vw,20px)}
+.who span{font-size:clamp(15px,.95vw,18px)}
+.happy{display:flex;width:max-content;max-width:100%;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:12px 24px 12px 14px;margin:clamp(36px,2.6vw,50px) auto 0}
+.happy__stack{display:flex}
+.happy__stack .media{width:58px;height:58px;border-radius:50%;border:3px solid var(--navy-900);margin-left:-10px}
+.happy__stack .media:first-child{margin-left:0}
+.happy .stars{color:var(--accent)}
+.happy strong{display:block;color:var(--ink);font-weight:600;font-size:clamp(16px,1.05vw,20px);margin-top:2px}
+
+/* ---------- FAQ ---------- */
+.faq{padding-block:var(--section) clamp(64px,5vw,100px)}
+.faq__grid{display:grid;grid-template-columns:minmax(0,600px) minmax(0,845px);justify-content:space-between;gap:clamp(36px,4vw,80px)}
+.faq__grid .h2+p{margin-top:clamp(24px,2.4vw,44px)}
+.qa{display:flex;flex-direction:column;gap:18px}
+.qitem{border:1px solid var(--line);border-radius:14px;background:#fff}
+.qitem button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;background:none;border:0;cursor:pointer;padding:22px 20px 22px clamp(20px,1.6vw,30px);font-weight:500;font-size:clamp(18px,1.4vw,26px);letter-spacing:-.035em;color:var(--ink);line-height:1.25}
+.qitem .pm{flex:none;width:40px;height:40px;border-radius:6px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center}
+.qitem .pm svg .v{transition:transform .3s;transform-origin:center}
+.qitem.open .pm svg .v{transform:scaleY(0)}
+.qitem .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.qitem .ans>div{overflow:hidden}
+.qitem .ans p{padding:0 clamp(20px,1.6vw,30px) 24px;max-width:640px;margin-top:-6px}
+.qitem.open .ans{grid-template-rows:1fr}
+
+/* ---------- Blog ---------- */
+.blog{padding-block:clamp(40px,4vw,80px) clamp(80px,8vw,150px)}
+.blog__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.blog__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:clamp(40px,4.6vw,88px)}
+.post{background:var(--cream);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.post:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,35,71,.08)}
+.post .media{aspect-ratio:480/333}
+.post__date{position:absolute;top:24px;left:24px;z-index:2;background:#fff;color:var(--text);font-size:clamp(14px,.95vw,18px);padding:4px 13px;border-radius:999px}
+.post__body{padding:clamp(22px,1.4vw,26px) clamp(22px,1.4vw,26px) clamp(24px,1.8vw,34px);display:flex;flex-direction:column;flex:1}
+.post h3{font-size:clamp(20px,1.38vw,26px);letter-spacing:-.035em;line-height:1.25;flex:1}
+.more{display:inline-flex;align-items:center;gap:10px;margin-top:22px;color:var(--accent);font-weight:600;font-size:clamp(15px,.98vw,18px)}
+.more svg{transition:transform .25s}
+.post:hover .more svg{transform:translateX(4px)}
+
+/* ---------- Contact ---------- */
+.contact{background:var(--mist);padding-block:clamp(72px,7.7vw,148px) clamp(72px,7.7vw,148px)}
+.contact__grid{display:grid;grid-template-columns:1fr minmax(0,760px);gap:clamp(40px,5vw,100px);align-items:start}
+.contact__info{display:flex;flex-direction:column;gap:clamp(26px,1.6vw,32px);margin-top:clamp(40px,10vw,210px)}
+.ci{display:flex;gap:16px;align-items:flex-start}
+.ci__ico{flex:none;width:72px;height:72px;border:1px solid #cfd4e0;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.ci h3{font-size:clamp(20px,1.38vw,26px);letter-spacing:-.035em;margin-top:6px}
+.ci p,.ci a{margin-top:8px;display:block}
+.ci a:hover{color:var(--accent)}
+.form{background:#fff;border-radius:var(--radius-lg);padding:clamp(24px,2vw,40px)}
+.field{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.field label{color:var(--ink);font-weight:500;font-size:clamp(16px,1.05vw,20px)}
+.field input,.field select{height:58px;border:1px solid var(--line);border-radius:6px;padding:0 18px;background:#fff;font-size:16px;color:var(--ink);width:100%;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.field input::placeholder{color:#8a90a6}
+.field input:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(74,91,145,.15)}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%231a2347' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 22px center;padding-right:48px;cursor:pointer}
+.field input[type=date],.field input[type=time]{min-width:0}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.form .btn{margin-top:2px;min-height:60px}
+.form__ok{display:none;margin-top:18px;padding:14px 18px;border-radius:10px;background:var(--accent-soft);color:var(--ink);font-weight:500}
+.form__ok.show{display:block}
+
+/* ---------- CTA ---------- */
+.cta{position:relative;isolation:isolate;padding-block:clamp(80px,7.8vw,150px);overflow:hidden}
+.cta__bg{position:absolute;inset:0;z-index:-1}
+.cta__card{width:min(850px,100%);margin-inline:auto;text-align:center;color:#fff;border-radius:var(--radius-lg);padding:clamp(40px,3.2vw,60px) clamp(22px,3vw,60px);background:linear-gradient(180deg,rgba(24,34,74,.62),rgba(24,34,74,.9));backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.cta h2{color:#fff}
+.cta p{margin-top:clamp(18px,1.8vw,30px);font-size:clamp(16px,1.08vw,20px);color:rgba(255,255,255,.92)}
+.cta__btns{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:clamp(28px,2.6vw,50px)}
+.cta__btns .btn{min-height:60px}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--navy-900);color:rgba(255,255,255,.75);padding-top:clamp(64px,5.8vw,110px)}
+.footer__grid{display:grid;grid-template-columns:1.6fr .75fr 1.08fr 1fr;gap:clamp(30px,3vw,60px)}
+.footer__brand img{height:clamp(44px,3vw,56px);width:auto}
+.footer__brand p{margin-top:clamp(24px,2.3vw,44px);color:rgba(255,255,255,.9);max-width:340px}
+.footer h4{color:#fff;font-size:clamp(15px,.98vw,18px);font-weight:700;letter-spacing:-.01em;text-transform:uppercase;margin-top:4px}
+.footer ul{margin-top:clamp(22px,2.2vw,44px);display:grid;gap:clamp(10px,.9vw,16px)}
+.footer li a,.footer li span{font-weight:500;font-size:clamp(16px,1.05vw,20px);transition:color .2s}
+.footer li a:hover{color:var(--gold-soft)}
+.footer__bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);margin-top:clamp(56px,5vw,96px);padding-block:clamp(24px,2.3vw,44px)}
+.footer__bottom p{font-size:clamp(14px,.95vw,18px)}
+.social{display:flex;gap:20px}
+.social a{color:#fff;display:flex;transition:color .2s}
+.social a:hover{color:var(--gold-soft)}
+
+/* ---------- Reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{transition-duration:.01ms!important}
+}
+
+/* ================= Responsive ================= */
+@media (max-width:1180px){
+  .nav{gap:20px}
+  .footer__grid{grid-template-columns:1fr 1fr;row-gap:48px}
+}
+@media (max-width:1024px){
+  .burger{display:inline-flex}
+  .header__cta .btn{display:none}
+  .nav{position:fixed;top:var(--hh,72px);left:0;right:0;bottom:0;flex-direction:column;align-items:stretch;gap:0;background:var(--navy-900);padding:16px var(--gutter) 32px;overflow-y:auto;transform:translateX(100%);transition:transform .35s ease;visibility:hidden}
+  .menu-open .nav{transform:none;visibility:visible}
+  .nav>a:not(.btn),.nav__drop>button{font-size:22px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);width:100%;justify-content:space-between}
+  .nav__menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;background:transparent;padding:0 0 0 12px;display:none;min-width:0}
+  .nav__drop.open .nav__menu{display:block}
+  .nav__menu a{color:rgba(255,255,255,.8);font-size:18px;padding:12px 0}
+  .nav__menu a:hover{background:none;color:var(--gold-soft)}
+  .nav .btn{display:flex;margin-top:24px;font-size:17px}
+  .menu-open{overflow:hidden}
+
+  .split__grid,.contact__grid{grid-template-columns:1fr}
+  .split__img{aspect-ratio:4/3}
+  .media>.why-img{object-position:50% 48%}
+  .treat__grid{grid-template-columns:1fr}
+  .treat__media{order:-1;aspect-ratio:4/3;min-height:0}
+  .media>.cosmetic-img{object-position:50% 44%}
+  .std__grid,.team__grid,.reviews__grid,.blog__grid{grid-template-columns:1fr 1fr}
+  .faq__grid{grid-template-columns:1fr}
+  .contact__info{margin-top:36px}
+}
+@media (min-width:1025px){ .nav .btn{display:none} }
+@media (max-width:768px){
+  .strip__grid{grid-template-columns:1fr 1fr;row-gap:22px}
+  .results__grid{grid-template-columns:1fr;gap:44px}
+  .std__grid,.reviews__grid,.blog__grid{grid-template-columns:1fr}
+  .std__head{align-items:flex-start}
+  /* Mobile hero: photo on top fading down into navy, card overlaps below */
+  .hero{flex-direction:column;align-items:stretch;min-height:0;background:var(--navy-900)}
+  .hero__bg{position:relative;inset:auto;height:clamp(240px,68vw,520px)}
+  .hero__bg>.hero__img{left:0;width:100%;height:auto;bottom:2px;object-position:55% 35%}
+  .hero__bg::after{background:linear-gradient(180deg,rgba(24,34,74,0) 0%,rgba(24,34,74,0) 45%,rgba(24,34,74,.65) 68%,var(--navy-900) 88%)}
+  .hero__card{margin-block:-72px 40px;position:relative;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;background:linear-gradient(180deg,rgba(32,44,92,.75),rgba(24,34,74,.96) 40%)}
+  .rcard blockquote{padding-bottom:0}
+  .cta{padding-top:120px}
+}
+@media (max-width:560px){
+  .team__grid{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr;gap:0}
+  .hero__btns .btn,.cta__btns .btn{width:100%}
+  .ba__knob{width:48px;height:48px}
+  .ba__line{width:5px}
+  .ci__ico{width:58px;height:58px}
+  .footer__grid{grid-template-columns:1fr}
+  .footer__bottom{flex-direction:column-reverse;align-items:flex-start}
+  .happy{padding:10px 16px 10px 10px}
+  .happy__stack .media{width:46px;height:46px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="logo" aria-label="Tooth Lovers Dental Clinic home">
+      <img src="assets/logo-horizontal-light.png" alt="Tooth Lovers Dental Clinic" width="275" height="64">
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <div class="nav__drop">
+        <button type="button" aria-expanded="false" aria-haspopup="true">Pages
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="nav__menu">
+          <a href="#treatments">Treatments</a>
+          <a href="#results">Smile Results</a>
+          <a href="#team">Our Dentists</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#blog">Blog</a>
+        </div>
+      </div>
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#treatments">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn--gold">Book A Visit</a>
+    </nav>
+    <div class="header__cta">
+      <a href="#contact" class="btn btn--gold">Book A Visit</a>
+      <button class="burger" type="button" aria-label="Open menu" aria-controls="nav" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero__bg media">
+    <img class="hero__img" src="assets/images/01-hero-2400.jpg" srcset="assets/images/01-hero-1200.jpg 1200w, assets/images/01-hero-2400.jpg 2400w" sizes="(max-width:768px) 100vw, 62vw" alt="Smiling patient chatting with his dentist at Tooth Lovers Dental Clinic" width="2400" height="1600" fetchpriority="high">
+  </div>
+  <div class="container">
+    <div class="hero__card">
+      <span class="eyebrow">Gentle Care, Lasting Smiles</span>
+      <h1>Fall In Love With Your Smile.</h1>
+      <p class="hero__lead">Warm, unhurried dentistry for every age, blending modern technology with a team that remembers your name and treats your smile like their own.</p>
+      <div class="hero__btns">
+        <a href="#contact" class="btn btn--accent">Book A Visit</a>
+        <a href="#treatments" class="btn btn--ghost-light">See Our Treatments</a>
+      </div>
+      <div class="trust">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg>
+        </span>
+        Loved By 4,800+ Families
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS STRIP ================= -->
+<section class="strip" aria-label="Clinic highlights">
+  <div class="container strip__grid">
+    <p>4,800+<br>Smiling Families</p>
+    <p>12+ Years<br>Of Gentle Care</p>
+    <p>4.9/5<br>Google Rating</p>
+    <p>Same-Week<br>Appointments</p>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="split" id="about">
+  <div class="container split__grid">
+    <div class="split__img media reveal">
+      <img src="assets/images/02-about-1800.jpg" srcset="assets/images/02-about-900.jpg 900w, assets/images/02-about-1800.jpg 1800w" sizes="(max-width:1024px) 100vw, 47vw" alt="Tooth Lovers dentist reviewing a dental X-ray on a tablet with a patient" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:78% 40%">
+    </div>
+    <div class="split__body reveal">
+      <span class="eyebrow">About Our Clinic</span>
+      <h2 class="h2">Big On Care.<br>Gentle On You.</h2>
+      <p class="lead">At Tooth Lovers Dental Clinic, we believe a great dental visit starts with listening. Our team takes the time to understand your worries and your goals, then builds a plan that feels comfortable, honest, and made just for you.</p>
+      <a href="#team" class="btn btn--outline">Meet Our Dentists</a>
+      <div class="nums">
+        <div><strong>12+</strong><span>Years of Practice</span></div>
+        <div><strong>30+</strong><span>Dental Services</span></div>
+        <div><strong>99%</strong><span>Would Recommend Us</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TREATMENTS ================= -->
+<section class="treat" id="treatments">
+  <div class="container">
+    <h2 class="h2 center reveal">Find Your Perfect Treatment</h2>
+    <p class="treat__intro center reveal">From routine cleanings to complete smile makeovers, every service is delivered with the same gentle hands.</p>
+    <div class="treat__grid">
+      <div class="tlist" id="tlist">
+        <div class="titem active" data-target="0">
+          <button class="titem__head" type="button" aria-expanded="true">Family &amp; General Dentistry</button>
+          <div class="titem__panel"><div>
+            <p>Checkups, cleanings, fillings and preventive care for kids and grown-ups alike, keeping the whole family's teeth and gums healthy year after year.</p>
+            <a href="#contact" class="btn btn--gold">View Details</a>
+          </div></div>
+        </div>
+        <div class="titem" data-target="1">
+          <button class="titem__head" type="button" aria-expanded="false">Cosmetic Dentistry</button>
+          <div class="titem__panel"><div>
+            <p>Whitening, porcelain veneers and bonding that brighten and reshape your smile while keeping it looking naturally, beautifully yours.</p>
+            <a href="#contact" class="btn btn--gold">View Details</a>
+          </div></div>
+        </div>
+        <div class="titem" data-target="2">
+          <button class="titem__head" type="button" aria-expanded="false">Dental Implants</button>
+          <div class="titem__panel"><div>
+            <p>Permanent, natural-feeling replacements for missing teeth, carefully planned with 3D imaging so you can eat, speak and smile with total confidence.</p>
+            <a href="#contact" class="btn btn--gold">View Details</a>
+          </div></div>
+        </div>
+        <div class="titem" data-target="3">
+          <button class="titem__head" type="button" aria-expanded="false">Clear Aligners &amp; Braces</button>
+          <div class="titem__panel"><div>
+            <p>Discreet clear aligners and modern braces that gently straighten teeth on a schedule that fits school, work and everything in between.</p>
+            <a href="#contact" class="btn btn--gold">View Details</a>
+          </div></div>
+        </div>
+      </div>
+      <div class="treat__media media" id="tmedia">
+        <img class="show" data-slide="0" src="assets/images/03-treatment-general-1800.jpg" srcset="assets/images/03-treatment-general-900.jpg 900w, assets/images/03-treatment-general-1800.jpg 1800w" sizes="(max-width:1024px) 100vw, 45vw" alt="Dentist reviewing a child's dental X-ray with her and her father" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:28% 50%">
+        <img class="cosmetic-img" data-slide="1" src="assets/images/04-treatment-cosmetic-1400.jpg" srcset="assets/images/04-treatment-cosmetic-800.jpg 800w, assets/images/04-treatment-cosmetic-1400.jpg 1400w" sizes="(max-width:1024px) 100vw, 45vw" alt="Dentist and patient choosing a tooth shade from a veneer shade guide" width="1400" height="2100" loading="lazy" decoding="async">
+        <img data-slide="2" src="assets/images/05-treatment-implants-1800.jpg" srcset="assets/images/05-treatment-implants-900.jpg 900w, assets/images/05-treatment-implants-1800.jpg 1800w" sizes="(max-width:1024px) 100vw, 45vw" alt="Dental implant model showing a titanium implant and crown between natural teeth" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:58% 50%">
+        <img data-slide="3" src="assets/images/06-treatment-aligners-1400.jpg" srcset="assets/images/06-treatment-aligners-800.jpg 800w, assets/images/06-treatment-aligners-1400.jpg 1400w" sizes="(max-width:1024px) 100vw, 45vw" alt="Dentist holding a teeth model and a clear aligner tray" width="1400" height="2100" loading="lazy" decoding="async" style="object-position:50% 52%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="split">
+  <div class="container split__grid">
+    <div class="split__img media reveal">
+      <img class="why-img" src="assets/images/07-why-choose-us-1400.jpg" srcset="assets/images/07-why-choose-us-800.jpg 800w, assets/images/07-why-choose-us-1400.jpg 1400w" sizes="(max-width:1024px) 100vw, 47vw" alt="Tooth Lovers dentist adjusting the treatment light for a teenage patient" width="1400" height="2100" loading="lazy" decoding="async">
+    </div>
+    <div class="split__body reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="h2">Why Families Fall For Tooth Lovers</h2>
+      <ul class="checks">
+        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6"/></svg>Kind, Board-Certified Dentists</li>
+        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6"/></svg>Low-Radiation Digital Imaging</li>
+        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6"/></svg>Plans Built Around Your Goals</li>
+        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6"/></svg>Calming, Anxiety-Friendly Studio</li>
+        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6"/></svg>Upfront, Honest Pricing</li>
+        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6"/></svg>Kids, Teens &amp; Seniors Welcome</li>
+      </ul>
+      <a href="#about" class="btn btn--outline">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="results" id="results">
+  <div class="container">
+    <h2 class="h2 center reveal">Real Smiles. Real Transformations.</h2>
+    <div class="results__grid">
+      <figure class="reveal" style="margin:0">
+        <div class="ba media">
+          <div class="ph ba__before" data-ph="08"><span class="ph__label"><span class="ph__num">IMAGE 08</span><span class="ph__desc">Result 1 — BEFORE</span></span></div>
+          <div class="ph ba__after" data-ph="09"><span class="ph__label"><span class="ph__num">IMAGE 09</span><span class="ph__desc">Result 1 — AFTER</span></span></div>
+          <span class="ba__tag ba__tag--l">Before</span><span class="ba__tag ba__tag--r">After</span>
+          <span class="ba__line"></span>
+          <span class="ba__knob" aria-hidden="true"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after, result 1">
+        </div>
+        <figcaption><h3>Whitening + Bonding | 3 Visits</h3></figcaption>
+      </figure>
+      <figure class="reveal" style="margin:0">
+        <div class="ba media">
+          <div class="ph ba__before" data-ph="10"><span class="ph__label"><span class="ph__num">IMAGE 10</span><span class="ph__desc">Result 2 — BEFORE</span></span></div>
+          <div class="ph ba__after" data-ph="11"><span class="ph__label"><span class="ph__num">IMAGE 11</span><span class="ph__desc">Result 2 — AFTER</span></span></div>
+          <span class="ba__tag ba__tag--l">Before</span><span class="ba__tag ba__tag--r">After</span>
+          <span class="ba__line"></span>
+          <span class="ba__knob" aria-hidden="true"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after, result 2">
+        </div>
+        <figcaption><h3>Porcelain Veneers | 2 Visits</h3></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUR STANDARD ================= -->
+<section class="std">
+  <div class="container">
+    <div class="std__head reveal">
+      <div>
+        <span class="eyebrow">Our Promise</span>
+        <h2 class="h2">Smarter Dentistry.<br>Softer Visits.</h2>
+      </div>
+      <p>From the first hello at our front desk to your final polish, each step is designed to feel relaxed, transparent and completely centered on you.</p>
+    </div>
+    <div class="std__grid">
+      <article class="fcard reveal">
+        <span class="fcard__ico"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12.6 12 20l-7.5-7.4A5 5 0 0 1 12 6a5 5 0 0 1 7.5 6.6Z"/></svg></span>
+        <h3>Heartfelt Attention</h3>
+        <p>Dentists who listen first, explain everything in plain words, and never rush you into a decision.</p>
+      </article>
+      <article class="fcard reveal">
+        <span class="fcard__ico"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/></svg></span>
+        <h3>Precise Technology</h3>
+        <p>3D scans, digital X-rays and intraoral cameras let you see exactly what we see, every step of the way.</p>
+      </article>
+      <article class="fcard reveal">
+        <span class="fcard__ico"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4.5 12.6 9a2 2 0 0 0 1.4 1.4l4.5 1.6-4.5 1.6A2 2 0 0 0 12.6 15L11 19.5 9.4 15A2 2 0 0 0 8 13.6L3.5 12 8 10.4A2 2 0 0 0 9.4 9ZM19 3v4M21 5h-4M5 18v3M6.5 19.5h-3"/></svg></span>
+        <h3>Cozy Comfort</h3>
+        <p>Soft blankets, noise-cancelling headphones and gentle sedation options so you feel at ease from start to finish.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="h2 center reveal">Meet The Smile Makers</h2>
+    <div class="team__grid">
+      <article class="doc reveal">
+        <div class="media"><div class="ph" data-ph="12"><span class="ph__label"><span class="ph__num">IMAGE 12</span><span class="ph__desc">Dr. Adrian Velasco</span></span></div></div>
+        <h3>Dr. Adrian Velasco</h3><p>Founder &amp; Lead Dentist</p>
+      </article>
+      <article class="doc reveal">
+        <div class="media"><div class="ph" data-ph="13"><span class="ph__label"><span class="ph__num">IMAGE 13</span><span class="ph__desc">Dr. Hannah Brooks</span></span></div></div>
+        <h3>Dr. Hannah Brooks</h3><p>Cosmetic Dentist</p>
+      </article>
+      <article class="doc reveal">
+        <div class="media"><div class="ph" data-ph="14"><span class="ph__label"><span class="ph__num">IMAGE 14</span><span class="ph__desc">Dr. Marcus Tan</span></span></div></div>
+        <h3>Dr. Marcus Tan</h3><p>Implant Specialist</p>
+      </article>
+      <article class="doc reveal">
+        <div class="media"><div class="ph" data-ph="15"><span class="ph__label"><span class="ph__num">IMAGE 15</span><span class="ph__desc">Dr. Clara Whitfield</span></span></div></div>
+        <h3>Dr. Clara Whitfield</h3><p>Orthodontist</p>
+      </article>
+      <article class="doc reveal">
+        <div class="media"><div class="ph" data-ph="16"><span class="ph__label"><span class="ph__num">IMAGE 16</span><span class="ph__desc">Dr. Elias Romero</span></span></div></div>
+        <h3>Dr. Elias Romero</h3><p>Oral Surgeon</p>
+      </article>
+      <article class="doc reveal">
+        <div class="media"><div class="ph" data-ph="17"><span class="ph__label"><span class="ph__num">IMAGE 17</span><span class="ph__desc">Dr. Naomi Castillo</span></span></div></div>
+        <h3>Dr. Naomi Castillo</h3><p>Pediatric Dentist</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <h2 class="h2 center reveal">Smiles Our Patients Share</h2>
+    <div class="reviews__grid">
+      <article class="rcard reveal">
+        <span class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg></span>
+        <blockquote>“I used to dread the dentist, but the team here changed that completely. They explained every step, checked in on me constantly, and I actually left smiling.”</blockquote>
+        <div class="who"><div class="avatar media"><div class="ph ph--tiny" data-ph="18"><span class="ph__label"><span class="ph__num">18</span></span></div></div><div><strong>Jessica Moreno</strong><span>Portland, OR</span></div></div>
+      </article>
+      <article class="rcard reveal">
+        <span class="stars" aria-label="4 out of 5 stars"><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg class="off" viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg></span>
+        <blockquote>“My two kids now ask when their next checkup is. The staff are patient, playful and so reassuring. It's the first dental office our whole family genuinely loves.”</blockquote>
+        <div class="who"><div class="avatar media"><div class="ph ph--tiny" data-ph="19"><span class="ph__label"><span class="ph__num">19</span></span></div></div><div><strong>Daniel Okafor</strong><span>Beaverton, OR</span></div></div>
+      </article>
+      <article class="rcard reveal">
+        <span class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg></span>
+        <blockquote>“My veneers look so natural that friends just think I've been sleeping better. Dr. Brooks listened to exactly what I wanted, and the result is better than I imagined.”</blockquote>
+        <div class="who"><div class="avatar media"><div class="ph ph--tiny" data-ph="20"><span class="ph__label"><span class="ph__num">20</span></span></div></div><div><strong>Lauren Mitchell</strong><span>Lake Oswego, OR</span></div></div>
+      </article>
+    </div>
+    <div class="happy reveal">
+      <div class="happy__stack">
+        <div class="media"><div class="ph ph--tiny" data-ph="21"><span class="ph__label"><span class="ph__num">21</span></span></div></div>
+        <div class="media"><div class="ph ph--tiny" data-ph="22"><span class="ph__label"><span class="ph__num">22</span></span></div></div>
+        <div class="media"><div class="ph ph--tiny" data-ph="23"><span class="ph__label"><span class="ph__num">23</span></span></div></div>
+      </div>
+      <div>
+        <span class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path d="m10 1.5 2.6 5.5 6 .7-4.4 4.1 1.1 6L10 14.9l-5.3 2.9 1.1-6L1.4 7.7l6-.7z"/></svg></span>
+        <strong>4,800+ Happy Patients</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="container faq__grid">
+    <div class="reveal">
+      <h2 class="h2">Questions? We've Got Answers</h2>
+      <p>Everything you might wonder about visiting us, from booking and insurance to keeping nerves in check. If you don't see your question here, our front desk is always happy to help.</p>
+    </div>
+    <div class="qa" id="qa">
+      <div class="qitem open">
+        <button type="button" aria-expanded="true">How Do I Schedule My First Visit?<span class="pm"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"/><path class="v" d="M12 4v16"/></svg></span></button>
+        <div class="ans"><div><p>Give us a call, send a message, or use the booking form below. Our team will reach out within one business day to confirm a time that works for you.</p></div></div>
+      </div>
+      <div class="qitem">
+        <button type="button" aria-expanded="false">What Happens At A New Patient Exam?<span class="pm"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"/><path class="v" d="M12 4v16"/></svg></span></button>
+        <div class="ans"><div><p>We'll chat about your history and goals, take digital X-rays, do a thorough exam and gentle cleaning, then walk you through any recommendations with clear pricing.</p></div></div>
+      </div>
+      <div class="qitem">
+        <button type="button" aria-expanded="false">Which Insurance Plans Do You Take?<span class="pm"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"/><path class="v" d="M12 4v16"/></svg></span></button>
+        <div class="ans"><div><p>We work with most major PPO plans and file claims for you. No insurance? Ask about our in-house Smile Membership and flexible monthly payment options.</p></div></div>
+      </div>
+      <div class="qitem">
+        <button type="button" aria-expanded="false">Are Digital X-Rays Safe For My Kids?<span class="pm"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"/><path class="v" d="M12 4v16"/></svg></span></button>
+        <div class="ans"><div><p>Yes. Our digital sensors use up to 80% less radiation than traditional film, and we only take X-rays when they're truly needed for your child's care.</p></div></div>
+      </div>
+      <div class="qitem">
+        <button type="button" aria-expanded="false">I Get Anxious At The Dentist. Can You Help?<span class="pm"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"/><path class="v" d="M12 4v16"/></svg></span></button>
+        <div class="ans"><div><p>Absolutely. We go at your pace, agree on a stop signal, and offer comfort extras plus nitrous oxide or oral sedation for patients who need a little more calm.</p></div></div>
+      </div>
+      <div class="qitem">
+        <button type="button" aria-expanded="false">How Do I Keep My Smile Healthy At Home?<span class="pm"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"/><path class="v" d="M12 4v16"/></svg></span></button>
+        <div class="ans"><div><p>Brush twice daily for two minutes, floss once a day, limit sugary snacks and drinks, and visit us every six months so small issues never become big ones.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOG ================= -->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="blog__head reveal">
+      <div>
+        <span class="eyebrow">From The Blog</span>
+        <h2 class="h2">Smile Stories<br>&amp; Healthy Habits</h2>
+      </div>
+      <a href="#blog" class="btn btn--outline">Read All Posts</a>
+    </div>
+    <div class="blog__grid">
+      <a href="#blog" class="post reveal">
+        <div class="media"><span class="post__date">Aug 12, 2026</span><img src="assets/images/24-blog-brushing-1200.jpg" srcset="assets/images/24-blog-brushing-700.jpg 700w, assets/images/24-blog-brushing-1200.jpg 1200w" sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 32vw" alt="Smiling girl brushing her teeth with a yellow toothbrush" width="1200" height="800" loading="lazy" decoding="async" style="object-position:60% 50%"></div>
+        <div class="post__body"><h3>5 Easy Ways To Make Brushing Fun For Little Ones</h3><span class="more">Read More <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a href="#blog" class="post reveal">
+        <div class="media"><span class="post__date">Sep 3, 2026</span><img src="assets/images/25-blog-veneers-1000.jpg" srcset="assets/images/25-blog-veneers-700.jpg 700w, assets/images/25-blog-veneers-1000.jpg 1000w" sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 32vw" alt="Tooth shade guide and dental models laid out on a blue background" width="1000" height="1500" loading="lazy" decoding="async" style="object-position:50% 5%"></div>
+        <div class="post__body"><h3>Veneers Or Whitening? Choosing The Right Smile Upgrade</h3><span class="more">Read More <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a href="#blog" class="post reveal">
+        <div class="media"><span class="post__date">Sep 24, 2026</span><img src="assets/images/26-blog-implant-recovery-1000.jpg" srcset="assets/images/26-blog-implant-recovery-700.jpg 700w, assets/images/26-blog-implant-recovery-1000.jpg 1000w" sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 32vw" alt="Dental models with an implant bridge mounted on a dental articulator" width="1000" height="1500" loading="lazy" decoding="async" style="object-position:50% 69%"></div>
+        <div class="post__body"><h3>What Recovery Really Looks Like After A Dental Implant</h3><span class="more">Read More <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / BOOKING ================= -->
+<section class="contact" id="contact">
+  <div class="container contact__grid">
+    <div class="reveal">
+      <h2 class="h2">Your Next Visit Starts With A Hello.</h2>
+      <div class="contact__info">
+        <div class="ci">
+          <span class="ci__ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+          <div><h3>Call Us:</h3><a href="tel:+15550184427">(555) 018-4427</a></div>
+        </div>
+        <div class="ci">
+          <span class="ci__ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>
+          <div><h3>Email Us:</h3><a href="mailto:smile@toothloversdental.com">smile@toothloversdental.com</a></div>
+        </div>
+        <div class="ci">
+          <span class="ci__ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><h3>Clinic Hours</h3><p>Mon to Fri: 8 AM–6 PM<br>Sat: 9 AM–2 PM · Sun: Closed</p></div>
+        </div>
+      </div>
+    </div>
+    <form class="form reveal" id="bookForm" novalidate>
+      <div class="field"><label for="f-name">Full Name</label><input id="f-name" name="name" type="text" placeholder="Jordan Ellis" autocomplete="name" required></div>
+      <div class="field"><label for="f-phone">Phone Number</label><input id="f-phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" inputmode="tel" required></div>
+      <div class="field"><label for="f-service">Choose a service</label>
+        <select id="f-service" name="service">
+          <option>Family &amp; General Dentistry</option>
+          <option>Cosmetic Dentistry</option>
+          <option selected>Dental Implants</option>
+          <option>Clear Aligners &amp; Braces</option>
+          <option>Emergency Visit</option>
+        </select>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="f-date">Preferred Date</label><input id="f-date" name="date" type="date" required></div>
+        <div class="field"><label for="f-time">Preferred Time</label><input id="f-time" name="time" type="time" min="08:00" max="18:00" required></div>
+      </div>
+      <button class="btn btn--dark" type="submit">Request My Visit</button>
+      <p class="form__ok" id="formOk" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="cta__bg media">
+    <div class="ph ph--dark ph--cta" data-ph="27"><span class="ph__label"><span class="ph__num">IMAGE 27</span><span class="ph__desc">CTA background — dentist caring for a relaxed patient</span></span></div>
+  </div>
+  <div class="container">
+    <div class="cta__card reveal">
+      <h2 class="h2">Ready To Fall For Your Smile?</h2>
+      <p>Your gentle, judgment-free dental home is just one visit away.</p>
+      <div class="cta__btns">
+        <a href="#contact" class="btn btn--gold">Book A Visit</a>
+        <a href="tel:+15550184427" class="btn btn--ghost-light">Call The Clinic</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-horizontal-light.png" alt="Tooth Lovers Dental Clinic" width="275" height="64" loading="lazy">
+        <p>Gentle, modern dentistry for the whole family, helping every patient feel confident, cared for and proud to smile.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#treatments">Family Dentistry</a></li>
+          <li><a href="#treatments">Cosmetic Dentistry</a></li>
+          <li><a href="#treatments">Dental Implants</a></li>
+          <li><a href="#treatments">Clear Aligners &amp; Braces</a></li>
+          <li><a href="#treatments">Emergency Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15550184427">(555) 018-4427</a></li>
+          <li><a href="mailto:smile@toothloversdental.com">smile@toothloversdental.com</a></li>
+          <li><span>2150 Rosewood Lane, Suite 4,<br>Portland, OR 97205, USA</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="yr">2026</span> Tooth Lovers Dental Clinic. All rights reserved.</p>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M14 8.5V6.6c0-.9.6-1.1 1-1.1h2.6V1.6h-3.6C10 1.6 9.2 4.3 9.2 6v2.5H6.9v4h2.3V22.4H14V12.5h3.2l.4-4Z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="X"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.8 2.5h3.3l-7.2 8.2 8.4 11.1h-6.6l-5.2-6.8-5.9 6.8H1.3l7.7-8.8L1 2.5h6.8l4.7 6.2Zm-1.2 17.3h1.8L7.3 4.4H5.4Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var doc=document.documentElement, body=document.body;
+
+  /* Header height var for mobile drawer */
+  var header=document.querySelector('.header');
+  function setHH(){doc.style.setProperty('--hh',header.offsetHeight+'px')}
+  setHH(); window.addEventListener('resize',setHH);
+
+  /* Mobile menu */
+  var burger=document.querySelector('.burger'), nav=document.getElementById('nav');
+  function closeMenu(){body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Open menu')}
+  burger.addEventListener('click',function(){
+    var open=body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu)});
+  window.addEventListener('resize',function(){if(window.innerWidth>1024)closeMenu()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();drop.classList.remove('open')}});
+
+  /* Pages dropdown */
+  var drop=document.querySelector('.nav__drop'), dropBtn=drop.querySelector('button');
+  dropBtn.addEventListener('click',function(e){e.stopPropagation();var o=drop.classList.toggle('open');dropBtn.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',function(e){if(!drop.contains(e.target)){drop.classList.remove('open');dropBtn.setAttribute('aria-expanded','false')}});
+
+  /* Treatment selector */
+  var items=document.querySelectorAll('#tlist .titem'), slides=document.querySelectorAll('#tmedia [data-slide]');
+  items.forEach(function(it){
+    it.querySelector('.titem__head').addEventListener('click',function(){
+      items.forEach(function(o){o.classList.remove('active');o.querySelector('.titem__head').setAttribute('aria-expanded','false')});
+      it.classList.add('active');this.setAttribute('aria-expanded','true');
+      var t=it.getAttribute('data-target');
+      slides.forEach(function(s){s.classList.toggle('show',s.getAttribute('data-slide')===t)});
+    });
+  });
+
+  /* Before / after sliders */
+  document.querySelectorAll('.ba').forEach(function(ba){
+    var r=ba.querySelector('input');
+    function upd(){ba.style.setProperty('--pos',r.value+'%')}
+    r.addEventListener('input',upd); upd();
+  });
+
+  /* FAQ accordion (one open at a time) */
+  var qs=document.querySelectorAll('#qa .qitem');
+  qs.forEach(function(q){
+    q.querySelector('button').addEventListener('click',function(){
+      var wasOpen=q.classList.contains('open');
+      qs.forEach(function(o){o.classList.remove('open');o.querySelector('button').setAttribute('aria-expanded','false')});
+      if(!wasOpen){q.classList.add('open');this.setAttribute('aria-expanded','true')}
+    });
+  });
+
+  /* Booking form (front-end demo) */
+  var form=document.getElementById('bookForm'), ok=document.getElementById('formOk'), dateIn=document.getElementById('f-date');
+  var today=new Date(); today.setMinutes(today.getMinutes()-today.getTimezoneOffset());
+  dateIn.min=today.toISOString().slice(0,10);
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=Array.prototype.find.call(form.querySelectorAll('[required]'),function(f){return !f.value.trim()});
+    if(bad){ok.textContent='Please fill in every field so we can confirm your visit.';ok.classList.add('show');bad.focus();return}
+    var name=form.elements['name'].value.trim().split(' ')[0];
+    ok.textContent='Thank you, '+name+'! We’ve received your request and will call you within one business day to confirm.';
+    ok.classList.add('show'); form.reset(); dateIn.min=today.toISOString().slice(0,10);
+  });
+
+  /* Reveal on scroll */
+  var rv=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    rv.forEach(function(el){io.observe(el)});
+  } else rv.forEach(function(el){el.classList.add('in')});
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
